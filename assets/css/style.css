@@ -1,2 +1,22 @@
 :root {
-    /* declare a variable with `--` syntax */
+    --pink: pink;
+--light: white; 
+--dark: rgb(59, 58, 58); }
+
+body { background-color: var(--dark);
+
+
+}
+
+section .card {
+    color: var(--pink);
+}
+
+
+
+.card{
+width:400px;
+height:150px;
+border-style:dashed; border-width:3px; color: var(--light);
+position:relative; 
+}
