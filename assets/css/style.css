@@ -1,15 +1,15 @@
 /* color scheme sourced from http://khroma.co/generator/ */
 :root {
-    --ocean-blue: #3a86d3;
+    --orange:orange;
     --yellow-sun: #e0ee17;
-    --gin: #e0eae4;
-    --grassy: #2ff740;
+    --grey: #e0eae4;
+    --red: red;
   }
   
   /* set content highlight color and background */
   ::selection {
     background-color: var(--yellow-sun);
-    color: var(--ocean-blue);
+    color: var(--orange);
   }
   
   html {
@@ -25,13 +25,13 @@
     /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
     font-size: 1.75rem;
     line-height: 1.5;
-    color: var(--gin);
-    background-color: var(--ocean-blue);
+    color: var(--grey);
+    background-color: var(--orange);
   }
   
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.625rem;
-    color: var(--grassy);
+    color: var(--red);
     font-weight: 700;
     line-height: 1.1;
   }
@@ -114,9 +114,7 @@
     /* when the screen resizes, make it so our columns don't jump in size */
     transition: flex-basis 500ms linear;
     margin-bottom: 1.5rem;
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(12, 1fr);
+    box-sizing: border-box;
   }
   
   /* make each code card a flexbox column to align and justify content within it */
@@ -126,10 +124,10 @@
     justify-content: flex-start;
     min-height: 100%;
     padding: 2rem;
-    color: var(--grassy);
+    color: var(--red);
   
     /* outline is like border, but on the outside of the box instead of inside */
-    outline: 2px dashed var(--gin);
+    outline: 2px dashed var(--grey);
     outline-offset: -2px;
     transition: all 0.5s ease-in-out;
   }
@@ -139,9 +137,9 @@
     position: relative;
     margin: -4rem 0 1.5rem 0;
     padding: 0.5rem 1rem;
-    background-color: var(--ocean-blue);
-    color: var(--grassy);
-    border: 2px solid var(--gin);
+    background-color: var(--orange);
+    color: var(--red);
+    border: 2px solid var(--grey);
     border-radius: 8px;
     transition: all 0.5s ease-in-out;
   }
@@ -149,7 +147,7 @@
   /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
   .code-card:hover,
   .code-card:hover .card-header {
-    box-shadow: inset 0px 0px 10px var(--grassy), 0 0 15px var(--grassy);
+    box-shadow: inset 0px 0px 10px var(--red), 0 0 15px var(--red);
     transform: rotate(10deg);
   }
   
@@ -164,7 +162,7 @@
     overflow: auto;
     tab-size: 4;
     padding: 1.2rem 1rem;
-    color: var(--gin);
+    color: var(--grey);
     border-radius: 8px;
     /* use linear-gradient() function to create a fading background  */
     background-image: linear-gradient(
